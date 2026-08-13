@@ -1,0 +1,31 @@
+import type { ReactNode } from "react";
+import { cn } from "@/lib/utils";
+import { useReveal } from "@/hooks/use-reveal";
+
+export function Reveal({
+  children,
+  className,
+  delay = 0,
+  as: Tag = "div",
+}: {
+  children: ReactNode;
+  className?: string;
+  delay?: number;
+  as?: "div" | "section" | "li" | "article" | "span";
+}) {
+  const { ref, shown } = useReveal<HTMLDivElement>();
+
+  return (
+    <Tag
+      ref={ref as never}
+      style={{ transitionDelay: `${delay}ms` }}
+      className={cn(
+        "transition-all duration-700 ease-out will-change-transform",
+        shown ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0",
+        className,
+      )}
+    >
+      {children}
+    </Tag>
+  );
+}
