@@ -43,22 +43,17 @@ export function Hero() {
         </Reveal>
 
         <Reveal delay={140}>
-          <div className="relative">
-            <div className="overflow-hidden rounded-[1.5rem]">
-              <img
-                src={carregamento.url}
-                alt="Carregamento de sacos para silagem Silo Flex em propriedade rural"
-                className="aspect-[4/5] w-full object-cover"
-                width={408}
-                height={484}
-              />
-            </div>
-            <div
-              aria-hidden
-              className="absolute -bottom-4 -left-4 -z-10 h-40 w-40 rounded-[1.5rem] bg-secondary"
+          <div className="overflow-hidden rounded-[1.5rem]">
+            <img
+              src={carregamento.url}
+              alt="Carregamento de sacos para silagem Silo Flex em propriedade rural"
+              className="aspect-[4/5] w-full object-cover"
+              width={408}
+              height={484}
             />
           </div>
         </Reveal>
+
       </div>
     </section>
   );
