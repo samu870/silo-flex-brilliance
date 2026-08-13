@@ -1,22 +1,21 @@
 import type { ReactNode } from "react";
-import { cn } from "@/lib/utils";
 import { WHATSAPP_URL } from "@/lib/siloflex";
+import { cn } from "@/lib/utils";
 
 type Variant = "solid" | "light" | "outline";
-type Size = "md" | "lg";
+type Size = "sm" | "md" | "lg";
 
 const variants: Record<Variant, string> = {
-  solid:
-    "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[var(--shadow-cta)]",
-  light:
-    "bg-background text-primary hover:bg-secondary shadow-[var(--shadow-soft)]",
+  solid: "bg-primary text-primary-foreground hover:bg-primary-deep",
+  light: "bg-background text-primary hover:bg-background/90",
   outline:
-    "border-2 border-primary/25 bg-transparent text-primary hover:border-primary/60 hover:bg-secondary",
+    "border border-primary/30 text-primary hover:border-primary hover:bg-secondary",
 };
 
 const sizes: Record<Size, string> = {
-  md: "px-6 py-3.5 text-sm",
-  lg: "px-8 py-4.5 text-base",
+  sm: "px-5 py-2.5 text-[0.7rem]",
+  md: "px-6 py-3 text-xs",
+  lg: "px-8 py-4 text-sm",
 };
 
 export function WhatsAppButton({
@@ -38,14 +37,14 @@ export function WhatsAppButton({
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "group inline-flex items-center justify-center gap-2.5 rounded-xl font-semibold tracking-wide uppercase transition-all duration-300 hover:-translate-y-0.5",
+        "inline-flex items-center justify-center gap-2 rounded-full font-display font-bold tracking-[0.14em] uppercase transition-colors duration-200",
         variants[variant],
         sizes[size],
         className,
       )}
     >
       {icon}
-      <span>{children}</span>
+      {children}
     </a>
   );
 }
