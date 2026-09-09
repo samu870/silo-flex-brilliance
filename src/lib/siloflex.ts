@@ -1,4 +1,4 @@
-export const WHATSAPP_URL = "https://wa.me/5544991748250";
+export const WHATSAPP_URL = "https://wa.me/message/MOQ5EHFQZYYMD1";
 
 export const COMPANY = {
   name: "Silo Flex",
