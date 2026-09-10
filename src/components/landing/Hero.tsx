@@ -1,6 +1,7 @@
-import carregamento from "@/assets/carregamento.jpg.asset.json";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { Reveal } from "./Reveal";
+
+const VIDEO_ID = "G7DpToumyII";
 
 export function Hero() {
   return (
@@ -43,14 +44,17 @@ export function Hero() {
         </Reveal>
 
         <Reveal delay={140}>
-          <div className="overflow-hidden rounded-[1.5rem]">
-            <img
-              src={carregamento.url}
-              alt="Carregamento de sacos para silagem Silo Flex em propriedade rural"
-              className="aspect-[4/5] w-full object-cover"
-              width={408}
-              height={484}
-            />
+          <div className="overflow-hidden rounded-[1.5rem] border border-border shadow-[var(--shadow-soft)]">
+            <div className="relative aspect-video w-full bg-black">
+              <iframe
+                className="absolute inset-0 h-full w-full"
+                src={`https://www.youtube.com/embed/${VIDEO_ID}?rel=0&modestbranding=1`}
+                title="Vídeo introdutório Silo Flex - Sacos para Silagem"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                referrerPolicy="strict-origin-when-cross-origin"
+              />
+            </div>
           </div>
         </Reveal>
 
