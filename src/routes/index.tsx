@@ -32,7 +32,6 @@ function Index() {
     <div className="min-h-screen bg-background font-sans antialiased">
       <Header />
       <main>
-        <VideoHero />
         <Hero />
         <Products />
         <About />
