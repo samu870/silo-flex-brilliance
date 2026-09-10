@@ -1,6 +1,7 @@
-import carregamento from "@/assets/carregamento.jpg.asset.json";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { Reveal } from "./Reveal";
+
+const VIDEO_ID = "G7DpToumyII";
 
 export function Hero() {
   return (
